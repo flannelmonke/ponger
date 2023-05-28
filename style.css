@@ -1,55 +1,42 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-#screen{
+
+#screen {
     position: relative;
     border: 3px solid blue;
     width: 750px;
     height: 750px;
     margin: 0 auto;
 }
-#player1{
+
+#player1 {
     border: 2px solid red;
     position: relative;
-    top: 175px;
+    top: 275px;
     width: 50px;
     height: 200px;
     background-color: red;
 }
-#player2{
+
+#player2 {
     border: 2px solid green;
     background-color: green;
     position: relative;
     width: 50px;
     height: 200px;
     left: 697px;
-    top: 175px;
+    top: 80px;
 }
-#projectile{
+
+#projectile {
+
     border: 2px solid blue;
     position: relative;
-    top: 175px;
     width: 25px;
     height: 25px;
-}
-.leftToRight{
-    animation: P1ToP2 2s linear;
-}
-.rightToLeft{
-    animation: P2ToP1 2s linear;
-}
-@keyframes P1ToP2 {
-    0%{left: 0px;}
-    25%{left: 174.5px}
-    50%{left: 349px}
-    75%{left: 523px}
-    100%{left: 725px;}
-}
-@keyframes P2ToP1 {
-    0%{left: 725px;}
-    25%{left: 523px}
-    50%{left: 349px}
-    75%{left: 174.5px}
-    100%{left: 0px;}
+    left: 45px;
+    top: 0px;
+    bottom: 0px;
 }
