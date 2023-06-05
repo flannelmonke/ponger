@@ -19,8 +19,12 @@ div can be a bit confusing. I'm using a function that is able to
 return the coordinates of any element. Now I'm trying to understand
 the number it's returning and how to make the coordinates 
 relate to the hit detection.
-## June 4th 2023
+## June 5th 2023
 I have finally figured out how to save the ball vector according to hit detection.
 Now all that is left to do is, implement a miss detection.
 Then finally a score board.
 Colours and whatnot will be changed after all the logic is done.
+Things I have learned today about JS is the importance of seperating logic from procedural code.
+My game.js file should only contain the procedural code/script of the how I want the game to play out.
+Meanwhile, my classes.js file should contain all the logic/calculations that are necessary for the procedural code
+to "play out."
