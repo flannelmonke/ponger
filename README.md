@@ -9,7 +9,7 @@ to make the ball move using CSS animations.
 I have recently realized that CSS is the most annoying thing to do
 ever. So instead I decided to use JavaScript animations, the same
 method I use for making player movements.
-## May 287th 2023
+## May 28th 2023
 I've been struggling a lot with how to export classes in JS.
 Embarassing to say... but I figured out how to do that with
 lots of googling and experimenting. (this was never taught in school)
@@ -19,3 +19,8 @@ div can be a bit confusing. I'm using a function that is able to
 return the coordinates of any element. Now I'm trying to understand
 the number it's returning and how to make the coordinates 
 relate to the hit detection.
+## June 4th 2023
+I have finally figured out how to save the ball vector according to hit detection.
+Now all that is left to do is, implement a miss detection.
+Then finally a score board.
+Colours and whatnot will be changed after all the logic is done.
