@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pong</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            font-family: 'Monomaniac One', serif;
+        }
+    </style>
 </head>
 <body>
+    <div id="layout">
+    <div class="header">
+        <h1>PONG</h1>
+        <br>
+        <div class="scores">
+            <h2>P1 | P2</h2>
+            <h2 id="board">0 | 0</h2>
+        </div>
+    </div>
     <br>
     <br>
     <div id="screen">
     <div id="player1"></div>
     <div id="player2"></div>
     <div id="projectile"></div>
+    </div>
     </div>
 </body>
 <script type="module" src="player.js"></script>

@@ -1,7 +1,8 @@
 export class player{
-    constructor(name, id){
+    constructor(name, id, score){
         this.name = name;
         this.id = id;
+        var score = 0;
     }
     getCords(id){
         let box = id.getBoundingClientRect();
@@ -17,46 +18,43 @@ export class player{
         let top = parseFloat(getComputedStyle(id).getPropertyValue("top"));
         top -= 20;
         id.style.top = top + "px";
-        console.log(this.getCords(this.id));
         return;
     }
     moveDOWN(id){
         let top = parseFloat(getComputedStyle(id).getPropertyValue("top"));
         top += 20;
         id.style.top = top + "px";
-        console.log(this.getCords(this.id));
         return ;
-    }   
+    }  
+    increaseScore(id, score){
+        this.score += 1;
+    }
 }
 export class projectile{
-    constructor(id, xVector, yVector, ballVector){
+    constructor(id, ballVector){
         this.id = id;
-        this.xVector = xVector;
-        this.yVector = yVector;
         this.ballVector = {up: false, down: false, left: false, right: false};
     }
     moveUP(id){
         let top = parseFloat(getComputedStyle(id).getPropertyValue("top"));
-        top -= 5;
+        top -= Math.floor(Math.random() * 7) + 3;
         id.style.top = top + "px";
-        console.log(this.getCords(this.id));
         return;
     }
     moveDOWN(id){
         let top = parseFloat(getComputedStyle(id).getPropertyValue("top"));
-        top += 5;
+        top += Math.floor(Math.random() * 7) + 3;
         id.style.top = top + "px";
-        console.log(this.getCords(this.id));
         return;
     }
     moveLeft(id) {
         let left = parseFloat(getComputedStyle(id).getPropertyValue('left'));
-        left -= 5;
+        left -= Math.floor(Math.random() * 7) + 3;
         id.style.left = left + 'px';
     }
     moveRight(id) {
         let left = parseFloat(getComputedStyle(id).getPropertyValue('left'));
-        left += 5;
+        left += Math.floor(Math.random() * 7) + 3;
         id.style.left = left + 'px';
     }
     getCords(id){
@@ -75,7 +73,11 @@ export class projectile{
         var p1_mid = (p1Cords.top + p1Cords.bottom) / 2;
         var p2_mid = (p2Cords.top + p2Cords.bottom) / 2;
         
-    
+        if(ballCords.left <= screenPOS.left){
+            return "player 2 score!"
+        }if(ballCords.right >= screenPOS.right){
+            return "player 1 score!";
+        }
         if(ballCords.left <= p1Cords.right && 
             (ball_mid <= p1Cords.bottom && ball_mid >= p1Cords.top)){
                 this.ballVector.left = false;
@@ -115,5 +117,14 @@ export class projectile{
             this.ballVector.down = false;
         }  
     }
-
+    reset(p1, p2, ball_pointer) {
+        p1.style.top = "275px";
+        p2.style.top = "80px";
+        ball_pointer.style.left = "350px";
+        ball_pointer.style.top = "0px";
+        this.ballVector.down = false;
+        this.ballVector.up = false;
+        this.ballVector.left = false;
+        this.ballVector.right = false;        
+    }
 }

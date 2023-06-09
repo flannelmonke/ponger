@@ -2,27 +2,33 @@
     margin: 0;
     padding: 0;
 }
-
+body {
+    background-color: black;
+}
+#layout{
+    display: inline-flex;
+}
 #screen {
     position: relative;
-    border: 3px solid blue;
+    border: 3px solid white;
     width: 750px;
-    height: 750px;
-    margin: 0 auto;
+    height: 700px;
+    margin-left: 250px;
+    margin-top: 25px;
 }
 
 #player1 {
-    border: 2px solid red;
+    border: 2px solid white;
     position: relative;
     top: 275px;
     width: 50px;
     height: 200px;
-    background-color: red;
+    background-color: white;
 }
 
 #player2 {
-    border: 2px solid green;
-    background-color: green;
+    border: 2px solid white;
+    background-color: white;
     position: relative;
     width: 50px;
     height: 200px;
@@ -32,11 +38,26 @@
 
 #projectile {
 
-    border: 2px solid blue;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: white;
     position: relative;
     width: 25px;
     height: 25px;
     left: 45px;
     top: 0px;
     bottom: 0px;
+}
+.head{
+    color: white;
+    text-align: center;
+}
+.header{
+    color: white;
+    display: inline;
+
+}
+.scores{
+    display: flex;
+    flex-direction: column;
 }
