@@ -28,3 +28,10 @@ Things I have learned today about JS is the importance of seperating logic from 
 My game.js file should only contain the procedural code/script of the how I want the game to play out.
 Meanwhile, my classes.js file should contain all the logic/calculations that are necessary for the procedural code
 to "play out."
+## June 9th 2023
+I have finished the final details of this project such as the scoreboard, giving players time to reset in between rounds and made the ball movement a bit more unpredictable. I am actually proud that I chose to do this project because I learned a lot about JavaScript animations and why I should avoid CSS animations as
+much as I can. I also learned how to import JavaScript files into another file as a module. That one maybe took the longest... lol
+Overall this project really strengthens my front-end capabilities by making a game that is pretty fun and overall I think pretty to look at. By all means, I dont think this project is original, but I do think it's a start.
+----------------------------------------------------------------
+## What's next?
+Right now I'm coming up for more ideas to improve my coding skills. I am thinking about starting a calendar application, maybe a text editor. I sort of wanna do something in Java again. As crazy as that sounds. I'm not quite sure what to do now because I'm sort of exciting to keep learning about all this. Personally I wanna keep studying neural networks, but those can wait... lol
