@@ -16,13 +16,13 @@ export class player{
     }
     moveUP(id){
         let top = parseFloat(getComputedStyle(id).getPropertyValue("top"));
-        top -= 20;
+        top -= 30;
         id.style.top = top + "px";
         return;
     }
     moveDOWN(id){
         let top = parseFloat(getComputedStyle(id).getPropertyValue("top"));
-        top += 20;
+        top += 30;
         id.style.top = top + "px";
         return ;
     }  
@@ -37,24 +37,24 @@ export class projectile{
     }
     moveUP(id){
         let top = parseFloat(getComputedStyle(id).getPropertyValue("top"));
-        top -= Math.floor(Math.random() * 7) + 3;
+        top -= Math.floor(Math.random() * 7) + 5;
         id.style.top = top + "px";
         return;
     }
     moveDOWN(id){
         let top = parseFloat(getComputedStyle(id).getPropertyValue("top"));
-        top += Math.floor(Math.random() * 7) + 3;
+        top += Math.floor(Math.random() * 7) + 5;
         id.style.top = top + "px";
         return;
     }
     moveLeft(id) {
         let left = parseFloat(getComputedStyle(id).getPropertyValue('left'));
-        left -= Math.floor(Math.random() * 7) + 3;
+        left -= Math.floor(Math.random() * 7) + 5;
         id.style.left = left + 'px';
     }
     moveRight(id) {
         let left = parseFloat(getComputedStyle(id).getPropertyValue('left'));
-        left += Math.floor(Math.random() * 7) + 3;
+        left += Math.floor(Math.random() * 7) + 5;
         id.style.left = left + 'px';
     }
     getCords(id){

@@ -14,7 +14,6 @@ var p1score = 0;
 var scoreBoard = document.getElementById("board");
 var p2score = 0;
 var playerKeyMap = {"W": false, "S": false, "Up": false, "Down": false};
-
 console.log(player1);
 console.log(player2);
 console.log(ball);
